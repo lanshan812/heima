@@ -1,0 +1,26 @@
+#服务基本配置
+RunMode: debug # 开发模式, debug, release, test
+ServiceName: patent
+ServiceUrl: http://127.0.0.1
+ServicePort: :5151
+TempFilePath: "/home/work/heima/api/patent/temp"
+#DB配置
+DB:
+  # patent:
+  #   addr: "admin:1qaz@WSX#EDC@tcp(120.92.100.183:19438)/patent?charset=utf8&parseTime=True&loc=Asia%2FShanghai"
+  #   idle: 10
+  #   max: 20
+  patent:
+    addr: "root:Wang.1628@tcp(localhost:3306)/patent?charset=utf8&parseTime=True&loc=Asia%2FShanghai"
+    idle: 10
+    max: 20
+#日志设置
+Log:
+  ginLogName: "/home/work/heima/log/patent/gin/gin.log"                  #设置 gin 框架的接口访问日志
+  appLogName: "/home/work/heima/log/patent/patent.log"    #设置项目运行时日志文件名，注意该名称不要与上一条重复 ,避免和 gin 框架的日志掺杂一起，造成混乱。
+  textFormat: "json"                                #记录日志的格式，参数选项：console、json ， console 表示一般的文本格式
+  timePrecision: "millisecond"                         #记录日志时，相关的时间精度，该参数选项：second  、 millisecond ， 分别表示 秒 和 毫秒 ,默认为毫秒级别
+  maxSize: 10                                           #每个日志的最大尺寸(以MB为单位）， 超过该值，系统将会自动进行切割
+  maxBackups: 7                                        #保留旧日志最大个数
+  maxAge: 15                                           #保留旧日志最大天数
+  compress: false

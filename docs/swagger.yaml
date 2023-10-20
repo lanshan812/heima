@@ -1,0 +1,264 @@
+basePath: /api
+host: 120.92.116.143
+info:
+  contact: {}
+paths:
+  /AddInformationList:
+    put:
+      consumes:
+      - application/json
+      description: 新增发布信息列表
+      parameters:
+      - description: AddInformationList
+        in: query
+        name: Action
+        required: true
+        type: string
+      - description: 内容
+        in: query
+        name: paragraph
+        required: true
+        type: string
+      - description: 时间，时间戳
+        in: query
+        name: date
+        required: true
+        type: integer
+      - description: 标题
+        in: query
+        name: title
+        required: true
+        type: string
+      produces:
+      - application/json
+      summary: '新增发布信息列表, Action: AddInformationList'
+      tags:
+      - 'login (URL: {host}/api/ledInfo)'
+  /DelInformationList:
+    get:
+      consumes:
+      - application/json
+      description: 删除发布信息列表
+      parameters:
+      - description: DelInformationList
+        in: query
+        name: Action
+        required: true
+        type: string
+      - description: 信息id
+        in: query
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      summary: '删除发布信息列表, Action: DelInformationList'
+      tags:
+      - 'login (URL: {host}/api/ledInfo)'
+  /GetCarScheduleList:
+    get:
+      consumes:
+      - application/json
+      description: 查询车辆调度列表
+      parameters:
+      - description: GetCarScheduleList
+        in: query
+        name: Action
+        required: true
+        type: string
+      produces:
+      - application/json
+      summary: '查询车辆调度列表, Action: GetCarScheduleList'
+      tags:
+      - 'login (URL: {host}/api/login)'
+  /GetInformationList:
+    get:
+      consumes:
+      - application/json
+      description: 查询发布信息列表
+      parameters:
+      - description: GetInformationList
+        in: query
+        name: Action
+        required: true
+        type: string
+      produces:
+      - application/json
+      summary: '查询发布信息列表, Action: GetInformationList'
+      tags:
+      - 'login (URL: {host}/api/ledInfo)'
+  /GetMp3List:
+    get:
+      consumes:
+      - application/json
+      description: 获取广播音频
+      parameters:
+      - description: GetMp3List
+        in: query
+        name: Action
+        required: true
+        type: string
+      produces:
+      - application/json
+      summary: '获取广播音频, Action: GetMp3List'
+      tags:
+      - 'login (URL: {host}/api/Mp3)'
+  /GetParkList:
+    get:
+      consumes:
+      - application/json
+      description: 查询发布信息列表
+      parameters:
+      - description: GetParkList
+        in: query
+        name: Action
+        required: true
+        type: string
+      produces:
+      - application/json
+      summary: '查询发布信息列表, Action: GetParkList'
+      tags:
+      - 'login (URL: {host}/api/Parkade)'
+  /GetSimList:
+    get:
+      consumes:
+      - application/json
+      description: 查询号码列表
+      parameters:
+      - description: GetSimList
+        in: query
+        name: Action
+        required: true
+        type: string
+      - description: sim
+        in: query
+        name: sim
+        type: string
+      - description: iccid
+        in: query
+        name: iccid
+        type: string
+      - description: 状态，
+        in: query
+        name: status
+        type: string
+      - description: 默认10
+        in: query
+        name: pageSize
+        type: integer
+      - description: 默认1
+        in: query
+        name: pageNum
+        type: integer
+      produces:
+      - application/json
+      summary: '查询号码列表, Action: GetSimList'
+      tags:
+      - 'login (URL: {host}/api/Sim)'
+  /GetVideoList:
+    get:
+      consumes:
+      - application/json
+      description: 获取监控视频
+      parameters:
+      - description: GetVideoList
+        in: query
+        name: Action
+        required: true
+        type: string
+      produces:
+      - application/json
+      summary: '获取监控视频, Action: GetVideoList'
+      tags:
+      - 'login (URL: {host}/api/Video)'
+  /Login:
+    get:
+      consumes:
+      - application/json
+      description: 登录平台
+      parameters:
+      - description: Login
+        in: query
+        name: Action
+        required: true
+        type: string
+      - description: 密码
+        in: query
+        name: password
+        required: true
+        type: string
+      - description: 账户
+        in: query
+        name: account
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"code":"OK","message":"OK","data":{}}'
+      summary: '登录平台, Action: Login'
+      tags:
+      - 'login (URL: {host}/api/login)'
+  /UpdateSimList:
+    put:
+      consumes:
+      - application/json
+      description: 更新号码详情
+      parameters:
+      - description: UpdateSimList
+        in: query
+        name: Action
+        required: true
+        type: string
+      - description: id
+        in: query
+        name: id
+        required: true
+        type: string
+      - description: 月流量
+        in: query
+        name: flow
+        required: true
+        type: integer
+      - description: 是否激活
+        in: query
+        name: activateStatus
+        required: true
+        type: string
+      - description: 激活时间
+        in: query
+        name: activateTime
+        required: true
+        type: string
+      - description: 开卡时间
+        in: query
+        name: openCardTime
+        required: true
+        type: string
+      - description: 可使用时间
+        in: query
+        name: useAge
+        required: true
+        type: string
+      - description: 有效期激活期
+        in: query
+        name: activateAge
+        required: true
+        type: string
+      - description: 到期时间
+        in: query
+        name: deadTime
+        required: true
+        type: string
+      - description: 状态
+        in: query
+        name: status
+        required: true
+        type: string
+      produces:
+      - application/json
+      summary: '更新号码详情, Action: UpdateSimList'
+      tags:
+      - 'login (URL: {host}/api/Sim)'
+swagger: "2.0"

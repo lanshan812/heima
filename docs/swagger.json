@@ -1,0 +1,390 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "host": "120.92.116.143",
+    "basePath": "/api",
+    "paths": {
+        "/AddInformationList": {
+            "put": {
+                "description": "新增发布信息列表",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "login (URL: {host}/api/ledInfo)"
+                ],
+                "summary": "新增发布信息列表, Action: AddInformationList",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "AddInformationList",
+                        "name": "Action",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "内容",
+                        "name": "paragraph",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "integer",
+                        "description": "时间，时间戳",
+                        "name": "date",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "标题",
+                        "name": "title",
+                        "in": "query",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        "/DelInformationList": {
+            "get": {
+                "description": "删除发布信息列表",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "login (URL: {host}/api/ledInfo)"
+                ],
+                "summary": "删除发布信息列表, Action: DelInformationList",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "DelInformationList",
+                        "name": "Action",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "integer",
+                        "description": "信息id",
+                        "name": "id",
+                        "in": "query",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        "/GetCarScheduleList": {
+            "get": {
+                "description": "查询车辆调度列表",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "login (URL: {host}/api/login)"
+                ],
+                "summary": "查询车辆调度列表, Action: GetCarScheduleList",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "GetCarScheduleList",
+                        "name": "Action",
+                        "in": "query",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        "/GetInformationList": {
+            "get": {
+                "description": "查询发布信息列表",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "login (URL: {host}/api/ledInfo)"
+                ],
+                "summary": "查询发布信息列表, Action: GetInformationList",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "GetInformationList",
+                        "name": "Action",
+                        "in": "query",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        "/GetMp3List": {
+            "get": {
+                "description": "获取广播音频",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "login (URL: {host}/api/Mp3)"
+                ],
+                "summary": "获取广播音频, Action: GetMp3List",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "GetMp3List",
+                        "name": "Action",
+                        "in": "query",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        "/GetParkList": {
+            "get": {
+                "description": "查询发布信息列表",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "login (URL: {host}/api/Parkade)"
+                ],
+                "summary": "查询发布信息列表, Action: GetParkList",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "GetParkList",
+                        "name": "Action",
+                        "in": "query",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        "/GetSimList": {
+            "get": {
+                "description": "查询号码列表",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "login (URL: {host}/api/Sim)"
+                ],
+                "summary": "查询号码列表, Action: GetSimList",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "GetSimList",
+                        "name": "Action",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "sim",
+                        "name": "sim",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "iccid",
+                        "name": "iccid",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "状态，",
+                        "name": "status",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "默认10",
+                        "name": "pageSize",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "默认1",
+                        "name": "pageNum",
+                        "in": "query"
+                    }
+                ]
+            }
+        },
+        "/GetVideoList": {
+            "get": {
+                "description": "获取监控视频",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "login (URL: {host}/api/Video)"
+                ],
+                "summary": "获取监控视频, Action: GetVideoList",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "GetVideoList",
+                        "name": "Action",
+                        "in": "query",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        "/Login": {
+            "get": {
+                "description": "登录平台",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "login (URL: {host}/api/login)"
+                ],
+                "summary": "登录平台, Action: Login",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Login",
+                        "name": "Action",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "密码",
+                        "name": "password",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "账户",
+                        "name": "account",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"code\":\"OK\",\"message\":\"OK\",\"data\":{}}"
+                    }
+                }
+            }
+        },
+        "/UpdateSimList": {
+            "put": {
+                "description": "更新号码详情",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "login (URL: {host}/api/Sim)"
+                ],
+                "summary": "更新号码详情, Action: UpdateSimList",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "UpdateSimList",
+                        "name": "Action",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "id",
+                        "name": "id",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "integer",
+                        "description": "月流量",
+                        "name": "flow",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "是否激活",
+                        "name": "activateStatus",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "激活时间",
+                        "name": "activateTime",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "开卡时间",
+                        "name": "openCardTime",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "可使用时间",
+                        "name": "useAge",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "有效期激活期",
+                        "name": "activateAge",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "到期时间",
+                        "name": "deadTime",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "状态",
+                        "name": "status",
+                        "in": "query",
+                        "required": true
+                    }
+                ]
+            }
+        }
+    }
+}
